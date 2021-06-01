@@ -5,9 +5,9 @@ class Application
   
       if req.path.match(/test/)
         send_test
-      elsif req.path.match("/photos") && req.get?
+      elsif req.path.match("/blogs") && req.get?
         get_blogs
-      elsif req.path.match("/photos") && req.post?
+      elsif req.path.match("/blogs") && req.post?
         post_blog(req)
       else
         send_not_found
@@ -28,7 +28,7 @@ class Application
     def post_blog(req)
         json_data = req.body.read 
         photo_hash = JSON.parse(json_data)
-        new_blog = Blog.create(photo_ids: blog_hash["photo_ids"],user_ids: blog_hash["blog_hash"], story: blog_hash["story"])
+        new_blog = Blog.create(photo_ids: blog_hash["photo_ids"], user_ids: blog_hash["user_ids"], story: blog_hash["story"])
     end
 
     def send_not_found
