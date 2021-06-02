@@ -4,14 +4,21 @@ class Application
       req = Rack::Request.new(env)
 
      
-
       if req.path.match("/photos")
         photo_instances_arr = Photo.all
         return [200, { 'Content-Type' => 'application/json' }, [ photo_instances_arr.to_json ]]
       
+      elsif req.path.match("/blogs")
+        blog_instances_arr = Blog.all
+        [200, {"Content-Type" => "application/json"}, [blog_instances_arr.to_json]]
+
+      elsif req.path.match("/users")
+        user_instances_arr = User.all
+        [200, {"Content-Type" => "application/json"}, [user_instances_arr.to_json]]
       
       else
         [404, {}, ["Path not found!!!"]]
+
   
 
 
