@@ -1,143 +1,163 @@
+puts "deleting old data"
+
+Photo.destroy_all
+Blog.destroy_all
+User.destroy_all
+
+Photo.reset_pk_sequence
+Blog.reset_pk_sequence
+User.reset_pk_sequence
+
 puts "Seeding photos..."
 
     Photo.create([
         {
-            "photo_url": "https://images.unsplash.com/photo-1488942446680-85dd7de440ef?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvdGVzdG9yc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "city"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1505576457712-b769c0c0a354?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cm9ja3N8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "landscape"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1471958680802-1345a694ba6d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2F5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "landscape"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c291dGglMjBhZnJpY2F8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "landscape"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1508004680771-708b02aabdc0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJhbWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "sea"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGVza3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "city"
-        },
-        {
-            "photo_url": "https://petapixel.com/assets/uploads/2019/06/daniel-cheung-129839-unsplash-800x534.jpg",
-            "category": "toys"
-        },
-        {
-            "photo_url": "https://dutchreview.com/wp-content/uploads/kelsey-chance-tAH2cA_BL5g-unsplash-scaled.jpg",
-            "category": "city"
-        },
-        {
-            "photo_url": "https://www.wonderplugin.com/wp-content/uploads/2016/11/unsplash-camel.jpeg",
+            "photo_url": "https://images.unsplash.com/photo-1517486430290-35657bdcef51?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGFuaW1hbHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
             "category": "animals"
         },
         {
-            "photo_url": "https://pbs.twimg.com/media/E03x-WOWUAkmtV9.jpg",
+            "photo_url": "https://images.unsplash.com/photo-1461695008884-244cb4543d74?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGJ1aWxkaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
             "category": "city"
         },
         {
-            "photo_url": "https://www.americantrails.org/images/_indexPanelImage/perry-grone-lbLgFFlADrY-unsplash.jpg",
-            "category": "city"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1511715282680-fbf93a50e721?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW92ZW1lbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "abstract"
-        },
-        {
-            "photo_url": "https://www.privacyinternational.org/sites/default/files/2020-05/max-bender-qUsHZwZHlgU-unsplash.jpg",
-            "category": "city"
-        },
-        {
-            "photo_url": "https://slc-atlanta.org/wp-content/uploads/2019/02/designecologist-781651-unsplash.jpg",
-            "category": "city"
-        },
-        {
-            "photo_url": "https://www.ship-technology.com/wp-content/uploads/sites/16/2021/04/jacek-dylag-Hr-631bMUfk-unsplash.jpg",
-            "category": "sea"
-        },
-        {
-            "photo_url": "https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2019/11/unsplash-ben-white-woman-on-dock-with-seagulls-.jpg",
-            "category": "sea"
-        },
-        {
-            "photo_url": "https://tubemango.com/wp-content/uploads/2020/10/temitayo-aina-tmz3Z1L1qaQ-unsplash.jpg",
-            "category": "city"
-        },
-        {
-            "photo_url": "https://www.metroweekly.com/wp-content/uploads/2021/04/ricardo-gomez-angel-98jVaVuGv0-unsplash-1.jpg",
-            "category": "abstract"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1604183667964-bce80268b39d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2hvY2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "portrait"
-        },
-        {
-            "photo_url": "https://freshwriting.nd.edu/system/essays/cover_images/000/000/187/large/hassan-pasha-7SjEuEF06Zw-unsplash.jpg?1595108700",
-            "category": "toys"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1544124094-8aea0374da93?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXQlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "portrait"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1552071379-041b32707fed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-            "category": "animals"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGV0c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "animals"
-        },
-        {
-            "photo_url": "https://pbs.twimg.com/media/DIDiIQjUIAAs7qL.jpg",
-            "category": "portrait"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1531859663445-5ced1d142f67?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2VhJTIwc3RvbmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "sea"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1452065656801-6c60b6e7cbc5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FpbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
-            "category": "sea"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1545997281-2cfe4d4b740f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80",
-            "category": "toys"
-        },
-        {
-            "photo_url": "https://images.unsplash.com/photo-1536257104079-aa99c6460a5a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGFuZHNjYXBlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+            "photo_url": "https://images.unsplash.com/photo-1534330207526-8e81f10ec6fc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
             "category": "landscape"
         },
         {
-            "photo_url": "https://images.unsplash.com/photo-1553949345-eb786bb3f7ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+            "photo_url": "https://images.unsplash.com/photo-1552289534-040da48b5682?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmxhY2slMjB3aGl0ZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+            "category": "landscape"
+        },
+        {
+            "photo_url": "https://www.moma.org/media/W1siZiIsIjM4ODkwNSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg?sha=df3daaa0bd2f6ad8",
+            "category": "sea"
+        },
+        {
+            "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Emotion_%28Unsplash%29.jpg",
+            "category": "city"
+        },
+        {
+            "photo_url": "https://i.pinimg.com/originals/b1/14/6b/b1146b8845e292090528cd228cdfa940.jpg",
+            "category": "toys"
+        },
+        {
+            "photo_url": "https://cdn.wallpapersafari.com/84/52/FIeJqS.jpg",
+            "category": "city"
+        },
+        {
+            "photo_url": "https://images.unsplash.com/photo-1470016342826-876ea880d0be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mjl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80",
+            "category": "animals"
+        },
+        {
+            "photo_url": "https://wallpaperaccess.com/full/869777.jpg",
+            "category": "city"
+        },
+        {
+            "photo_url": "https://i.pinimg.com/originals/e6/61/b5/e661b5bb3ba9a82da67f8b74261be0b5.jpg",
+            "category": "city"
+        },
+        {
+            "photo_url": "http://d279m997dpfwgl.cloudfront.net/wp/2019/01/volkan-olmez-523-unsplash-1000x564.jpg",
             "category": "abstract"
         },
         {
-            "photo_url": "https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+            "photo_url": "https://2vynjo3oi9ijs29xb3fmjtn1-wpengine.netdna-ssl.com/wp-content/dropzone/2015/06/chris-burden_0001.jpg",
+            "category": "city"
+        },
+        {
+            "photo_url": "http://inspirationfeed.com/wp-content/uploads/2018/12/daniele-levis-pelusi-383478-unsplash-800x533.jpg",
+            "category": "city"
+        },
+        {
+            "photo_url": "https://wpr-public.s3.amazonaws.com/ttbook/styles/story_full_image/s3/images/ethan-cull-1055798-unsplash-Edit.jpg?itok=ghtCt1vs",
+            "category": "sea"
+        },
+        {
+            "photo_url": "https://www.ncronline.org/sites/default/files/Prison%20bars%20by%20Marco%20Chilese%20on%20Unsplash%20c.jpg",
+            "category": "sea"
+        },
+        {
+            "photo_url": "https://image.invaluable.com/housePhotos/pasarel/13/695013/H19097-L243438623.jpg",
+            "category": "city"
+        },
+        {
+            "photo_url": "https://res.feednews.com/assets/v2/d878fdf341d8ac23ad31357626551572?width=1280&height=720&quality=hq&category=us_Culture",
             "category": "abstract"
         },
         {
-            "photo_url": "https://images.unsplash.com/photo-1487252665478-49b61b47f302?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Z3JvdXAlMjBhbmltYWxzfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80",
+            "photo_url": "https://images.unsplash.com/photo-1477132394330-d2376dc4c091?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGRlc2lnbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+            "category": "portrait"
+        },
+        {
+            "photo_url": "https://images.unsplash.com/photo-1494926918150-fd1349407c81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+            "category": "toys"
+        },
+        {
+            "photo_url": "http://images.unsplash.com/photo-1551735084-34054d4a1372?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
+            "category": "portrait"
+        },
+        {
+            "photo_url": "https://images.unsplash.com/photo-1522152718677-c543b1979c29?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFuaW1hbCUyMHNrdWxsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+            "category": "animals"
+        },
+        {
+            "photo_url": "https://images.unsplash.com/photo-1534330207526-8e81f10ec6fc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+            "category": "animals"
+        },
+        {
+            "photo_url": "https://brassanimals.com/wp-content/uploads/2019/09/tristan-colangelo-ibpzzTR3VxY-unsplash-1240x698.jpg",
+            "category": "portrait"
+        },
+        {
+            "photo_url": "https://images.unsplash.com/photo-1588398810064-60829515dd4c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmxhY2slMjBkZWF0aHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+            "category": "sea"
+        },
+        {
+            "photo_url": "https://i2.wp.com/uselessoldtree.com/wp-content/uploads/2018/04/geetanjal-khanna-81242-unsplash-1024x683.jpg?resize=1024%2C683",
+            "category": "sea"
+        },
+        {
+            "photo_url": "https://bhekisisa.org/wp-content/uploads/2020/07/f7e9f591-noah-silliman-gzhykeo_cbu-unsplash-scaled.jpg",
+            "category": "toys"
+        },
+        {
+            "photo_url": "https://openwaterhq.com/wp-content/uploads/2020/06/israel-gil-dXxTgtgOdzw-unsplash.jpg",
+            "category": "landscape"
+        },
+        {
+            "photo_url": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/gravestone-leap-frog-bert-hardy.jpg",
+            "category": "abstract"
+        },
+        {   
+            "photo_url": "https://img.buzzfeed.com/buzzfeed-static/static/2020-07/29/18/asset/9ddb0b23669a/sub-buzz-9696-1596049053-20.jpg",
+            "category": "abstract"
+        },
+        {
+            "photo_url": "https://iphf.org/wp-content/uploads/2016/08/3000x1800_the_invisible_man__harlem__new_york__1952__c__gordon_parks_courtesy_the_gordon_parks_foundation-scaled.jpg",
             "category": "animals"
         }
     ])
+
+
+
+
+puts "Seeding Users..."
+13.times do
+    User.create([{"username": Faker::Name.first_name}])
 end
+
+
+
 puts "Seeding Blogs..."
 
-    Blog.create([{
-        "photo_ids":
-        "user_ids":
-        "story":
-    }])
-end
-puts "Seeding Users..."
+19.times do
+    user_i = User.ids.sample
+    photo_i = Photo.ids.sample
 
-    User.create([{
-        "username":
+    Blog.create([{
+        "photo_ids": photo_i,
+        "user_ids": user_i, 
+        "story": Faker::Quote.yoda
     }])
 end
+
+puts "done"
