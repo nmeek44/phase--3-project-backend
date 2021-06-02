@@ -4,18 +4,32 @@ class Application
       req = Rack::Request.new(env)
 
      
-      if req.path.match("/photos")
+      if req.path.match("/photos") && req.get?
         photo_instances_arr = Photo.all
         return [200, { 'Content-Type' => 'application/json' }, [ photo_instances_arr.to_json ]]
+ 
       
-      elsif req.path.match("/blogs")
+
+      elsif req.path.match("/blogs") && req.get?
         blog_instances_arr = Blog.all
         [200, {"Content-Type" => "application/json"}, [blog_instances_arr.to_json]]
 
-      elsif req.path.match("/users")
+      elsif req.path.match("/blogs") && req.post? 
+        blog_hash = JSON.parse(req.body.read)
+        new_blog = Blog.create(blog_hash)
+        return [201, {"Content-Type" => "application/json"}, [new_blog.to_json]]
+      
+      elsif req.path.match("/blogs") && req.delete? 
+
+
+      elsif req.path.match("/users") && req.get?
         user_instances_arr = User.all
         [200, {"Content-Type" => "application/json"}, [user_instances_arr.to_json]]
+
+      elsif req.path.match("/users") && req.post?   
       
+      elsif req.path.match("/users") && req.delete?  
+
       else
         [404, {}, ["Path not found!!!"]]
 
