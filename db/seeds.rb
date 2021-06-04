@@ -52,7 +52,7 @@ puts "Seeding photos..."
             "category": "city"
         },
         {
-            "photo_url": "https://i.pinimg.com/originals/e6/61/b5/e661b5bb3ba9a82da67f8b74261be0b5.jpg",
+            "photo_url": "https://www.wallpapertip.com/wmimgs/45-450561_black-and-white-space.jpg",
             "category": "city"
         },
         {
@@ -72,7 +72,7 @@ puts "Seeding photos..."
             "category": "sea"
         },
         {
-            "photo_url": "https://www.ncronline.org/sites/default/files/Prison%20bars%20by%20Marco%20Chilese%20on%20Unsplash%20c.jpg",
+            "photo_url": "https://artist.com/photos/arts/extra-big/room-with-a-view-292012681.jpg",
             "category": "sea"
         },
         {
@@ -80,7 +80,7 @@ puts "Seeding photos..."
             "category": "city"
         },
         {
-            "photo_url": "https://res.feednews.com/assets/v2/d878fdf341d8ac23ad31357626551572?width=1280&height=720&quality=hq&category=us_Culture",
+            "photo_url": "https://www.hollywoodreporter.com/wp-content/uploads/2018/03/andre_giant_2_copy_-_h_2018.jpg",
             "category": "abstract"
         },
         {
@@ -88,7 +88,7 @@ puts "Seeding photos..."
             "category": "portrait"
         },
         {
-            "photo_url": "https://images.unsplash.com/photo-1494926918150-fd1349407c81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
+            "photo_url": "https://photos.lensculture.com/large/26fb0953-6e12-494f-86b3-21e997de2136.jpg",
             "category": "toys"
         },
         {
@@ -134,7 +134,23 @@ puts "Seeding photos..."
         {
             "photo_url": "https://iphf.org/wp-content/uploads/2016/08/3000x1800_the_invisible_man__harlem__new_york__1952__c__gordon_parks_courtesy_the_gordon_parks_foundation-scaled.jpg",
             "category": "animals"
-        }
+        }, 
+        {   
+            "photo_url": "https://www.simonwiffenphotography.co.uk/wp-content/uploads/2019/06/1Y6A6315-1024x683.jpg",
+            "category": "abstract"
+        },
+        {   
+            "photo_url": "https://i.pinimg.com/originals/ec/f9/88/ecf988beafdc9a8224ada1dd93e7b543.jpg",
+            "category": "abstract"
+        },
+        {   
+            "photo_url": "https://i2.wp.com/unitednationsofphotography.com/wp-content/uploads/2020/05/Screen-Shot-2020-05-06-at-10.31.42.png?fit=1440%2C951&ssl=1",
+            "category": "abstract"
+        },
+        {   
+            "photo_url": "https://thelongtakedotnet.files.wordpress.com/2016/07/bridgeshot-manhattan.jpg",
+            "category": "abstract"
+        },
     ])
 
 
@@ -149,7 +165,7 @@ end
 
 puts "Seeding Blogs..."
 
-19.times do
+81.times do
     user_i = User.ids.sample
     photo_i = Photo.ids.sample
 
