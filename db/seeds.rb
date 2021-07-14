@@ -28,7 +28,7 @@ puts "Seeding photos..."
             "category": "landscape"
         },
         {
-            "photo_url": "https://www.moma.org/media/W1siZiIsIjM4ODkwNSJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MTQ0MFx1MDAzZSJdXQ.jpg?sha=df3daaa0bd2f6ad8",
+            "photo_url": "https://i.pinimg.com/originals/eb/3d/2f/eb3d2f362537dce0081a0ea86b682029.jpg",
             "category": "sea"
         },
         {
@@ -48,7 +48,7 @@ puts "Seeding photos..."
             "category": "animals"
         },
         {
-            "photo_url": "https://wallpaperaccess.com/full/869777.jpg",
+            "photo_url": "https://www.apple.com/newsroom/images/values/diversity-inclusion/lifestyle/Apple_Shot-on-iPhone12pro_020121_Full-Bleed-Image.jpg.large.jpg",
             "category": "city"
         },
         {
@@ -64,7 +64,7 @@ puts "Seeding photos..."
             "category": "city"
         },
         {
-            "photo_url": "http://inspirationfeed.com/wp-content/uploads/2018/12/daniele-levis-pelusi-383478-unsplash-800x533.jpg",
+            "photo_url": "https://images.unsplash.com/photo-1446729444801-31245ddba81a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8&w=1000&q=80",
             "category": "city"
         },
         {
@@ -150,7 +150,8 @@ puts "Seeding photos..."
         {   
             "photo_url": "https://thelongtakedotnet.files.wordpress.com/2016/07/bridgeshot-manhattan.jpg",
             "category": "abstract"
-        },
+        }
+    
     ])
 
 
@@ -165,7 +166,7 @@ end
 
 puts "Seeding Blogs..."
 
-81.times do
+50.times do
     user_i = User.ids.sample
     photo_i = Photo.ids.sample
 
