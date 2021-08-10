@@ -26,7 +26,10 @@ class Application
         user_instances_arr = User.all
         [200, {"Content-Type" => "application/json"}, [user_instances_arr.to_json]]
 
-      elsif req.path.match("/users") && req.post?   
+      elsif req.path.match("/users") && req.post?
+        user_hash = JSON.parse(req.body.read)
+        new_user = User.create(user_hash)
+        return [201, {"Content-Type" => "application/json"}, [new_user.to_json]]   
       
       elsif req.path.match("/users") && req.delete?  
 
