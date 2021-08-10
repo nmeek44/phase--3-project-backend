@@ -1,0 +1,10 @@
+50.times do
+    user_i = User.ids.sample
+    photo_i = Photo.ids.sample
+
+    Blog.create([{
+        "photo_ids": photo_i,
+        "user_ids": user_i, 
+        "story": Faker::Quote.yoda
+    }])
+end
